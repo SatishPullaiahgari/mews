@@ -1,0 +1,75 @@
+/* Basic styles for the documents component */
+
+.required {
+  color: red;
+}
+
+.conditional {
+  color: #ffc107;
+}
+
+.document-upload-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.document-upload-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.document-info h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.document-info p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.upload-area {
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.upload-area a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  .save-draft-btn,
+  .next-btn,
+  .back-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .save-draft-btn {
+    background-color: #f0f2f5;
+  }
+
+  .next-btn {
+    background-color: #003366;
+    color: #fff;
+  }
+
+  .back-btn {
+    background-color: #ccc;
+  }
+}

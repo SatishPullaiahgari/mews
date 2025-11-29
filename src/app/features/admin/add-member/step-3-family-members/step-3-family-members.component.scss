@@ -1,0 +1,49 @@
+/* Basic styles for the family-members component */
+
+.no-family-members {
+  text-align: center;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.family-member-list {
+  margin-top: 20px;
+}
+
+.family-member-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  .save-draft-btn,
+  .next-btn,
+  .back-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .save-draft-btn {
+    background-color: #f0f2f5;
+  }
+
+  .next-btn {
+    background-color: #003366;
+    color: #fff;
+  }
+
+  .back-btn {
+    background-color: #ccc;
+  }
+}

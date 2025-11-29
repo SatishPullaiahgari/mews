@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/mews/server/main.server.mjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/mews/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/mews/server/main.server.mjs"
+    }
+  ]
+}

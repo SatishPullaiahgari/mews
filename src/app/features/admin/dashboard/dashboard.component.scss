@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  position: relative;
+}
+
+.main-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #f9fafb;
+}
+
+@media (max-width: 992px) {
+  app-sidenav {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidenav-open app-sidenav {
+    left: 0;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}

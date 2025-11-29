@@ -1,0 +1,171 @@
+<div class="welcome-header">
+  <div>
+    <h1>Welcome back, Rajesh Kumar</h1>
+    <p>District Administrator - Hyderabad District</p>
+  </div>
+  <div class="date-time">
+    <p>Today, January 15, 2025</p>
+    <p>2:30 PM IST</p>
+  </div>
+</div>
+
+<div class="dashboard-grid">
+  <div class="summary-cards">
+    <div class="card" [routerLink]="['/admin/all-members']">
+      <div class="card-header">
+        <div class="card-icon-bg" style="background-color: #e7f0fa;"><mat-icon>groups</mat-icon></div>
+        <div class="card-title">
+          <h4>My Area Members</h4>
+          <p class="subtitle">Total in Hyderabad District</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="stat">2,847</p>
+        <p class="change positive"><span class="arrow">▲</span>+5.2% this month</p>
+      </div>
+    </div>
+    <div class="card" [routerLink]="['/admin/add-member']">
+      <div class="card-header">
+        <div class="card-icon-bg" style="background-color: #e5f8f0;"><mat-icon>person_add</mat-icon></div>
+        <div class="card-title">
+          <h4>Today Added</h4>
+          <p class="subtitle">New registrations today</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="stat">23</p>
+        <div class="progress-bar"><div class="progress" style="width: 76%; background-color: #28a745;"></div></div>
+        <p class="progress-label">76% of daily target (30)</p>
+      </div>
+    </div>
+    <div class="card verification">
+      <div class="card-header">
+        <div class="card-icon-bg" style="background-color: #fff8e1;"><mat-icon>pending_actions</mat-icon></div>
+        <div class="card-title">
+          <h4>Pending Verifications</h4>
+          <p class="subtitle">Awaiting approval</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="stat">47</p>
+      </div>
+      <div class="card-footer">
+        <span class="urgent-tag">12 urgent</span>
+        <button class="review-now-btn" [routerLink]="['/admin/pending-approvals']">Review Now</button>
+      </div>
+    </div>
+    <div class="card" [routerLink]="['/admin/campaigns']">
+      <div class="card-header">
+        <div class="card-icon-bg" style="background-color: #fceef2;"><mat-icon>campaign</mat-icon></div>
+        <div class="card-title">
+          <h4>Active Campaigns</h4>
+          <p class="subtitle">Target 12.5L</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="stat">8</p>
+        <div class="progress-bar"><div class="progress" style="width: 67%; background-color: #dc3545;"></div></div>
+        <p class="progress-label">₹8,42,500 raised (67%)</p>
+      </div>
+    </div>
+    <div class="card" [routerLink]="['/admin/donation-reports']">
+      <div class="card-header">
+        <div class="card-icon-bg" style="background-color: #e5f8f0;"><mat-icon>monetization_on</mat-icon></div>
+        <div class="card-title">
+          <h4>This Month Donations</h4>
+          <p class="subtitle">Collected in January</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="stat">₹8,42,500</p>
+        <p class="change positive"><span class="arrow">▲</span>+18% vs last month</p>
+      </div>
+    </div>
+    <div class="card alerts">
+      <div class="card-header">
+        <div class="card-icon-bg" style="background-color: #fceef2;"><mat-icon>sos</mat-icon></div>
+        <div class="card-title">
+          <h4>SOS Alerts</h4>
+          <p class="subtitle">Unresolved emergencies</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="stat">3</p>
+      </div>
+      <div class="card-footer">
+        <span class="critical-tag">2 critical</span>
+        <button class="view-all-btn" [routerLink]="['/admin/pending-approvals']">View All</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="recent-activities">
+    <h4>Recent Activities</h4>
+    <ul>
+      <li>
+        <div class="activity-icon" style="background-color: #e7f0fa;"><mat-icon>how_to_reg</mat-icon></div>
+        <div>
+          <p>12 members approved by Mandal Admin - Secunderabad</p>
+          <span>15 minutes ago</span>
+        </div>
+      </li>
+      <li>
+        <div class="activity-icon" style="background-color: #fceef2;"><mat-icon>campaign</mat-icon></div>
+        <div>
+          <p>New campaign created: "Education Support for Rural Children"</p>
+          <span>1 hour ago</span>
+        </div>
+      </li>
+      <li>
+        <div class="activity-icon" style="background-color: #e5f8f0;"><mat-icon>verified</mat-icon></div>
+        <div>
+          <p>SOS Alert resolved: Medical emergency in Kukatpally</p>
+          <span>3 hours ago</span>
+        </div>
+      </li>
+      <li>
+        <div class="activity-icon" style="background-color: #e7f0fa;"><mat-icon>upload</mat-icon></div>
+        <div>
+          <p>Bulk upload completed: 45 new members from Begumpet</p>
+          <span>5 hours ago</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="quick-actions-and-mandals">
+    <div class="quick-actions card">
+      <h4>Quick Actions</h4>
+      <button class="add-member" [routerLink]="['/admin/add-member']"><mat-icon>person_add</mat-icon> Add New Member</button>
+      <button [routerLink]="['/admin/campaigns']"><mat-icon>campaign</mat-icon> Create Campaign</button>
+      <button [routerLink]="['/admin/donation-reports']"><mat-icon>assessment</mat-icon> Generate Report</button>
+    </div>
+    <div class="top-performing-mandals card">
+      <h4>Top Performing Mandals</h4>
+      <ul>
+        <li>
+          <div>
+            <p>Secunderabad</p>
+            <span>487 members</span>
+          </div>
+          <span class="efficiency">98.5%</span>
+        </li>
+        <li>
+          <div>
+            <p>Kukatpally</p>
+            <span>423 members</span>
+          </div>
+          <span class="efficiency">96.2%</span>
+        </li>
+        <li>
+          <div>
+            <p>Begumpet</p>
+            <span>381 members</span>
+          </div>
+          <span class="efficiency">94.8%</span>
+        </li>
+      </ul>
+      <a href="#">View Full Leaderboard →</a>
+    </div>
+  </div>
+</div>

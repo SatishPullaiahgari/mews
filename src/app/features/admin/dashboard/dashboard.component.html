@@ -1,0 +1,9 @@
+<div class="dashboard-container" [class.sidenav-open]="isSidenavOpen">
+  <app-sidenav (closeSidenav)="isSidenavOpen = false"></app-sidenav>
+  <div class="main-content">
+    <app-header (toggleSidenav)="isSidenavOpen = !isSidenavOpen"></app-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

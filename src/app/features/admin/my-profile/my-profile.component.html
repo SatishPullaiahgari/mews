@@ -1,0 +1,309 @@
+<div class="my-profile-container">
+  <div class="header">
+    <h1>My Profile</h1>
+    <p>Manage your account and view your activity</p>
+  </div>
+
+  <mat-card class="profile-summary-card">
+    <mat-card-content>
+      <div class="profile-pic">
+        <img src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="Rajesh Kumar">
+        <button mat-icon-button class="edit-profile-pic-btn">
+          <mat-icon>photo_camera</mat-icon>
+        </button>
+      </div>
+      <div class="profile-info">
+        <div class="name-section">
+          <h2>Rajesh Kumar</h2>
+          <span class="status-chip active">Active</span>
+        </div>
+        <div class="details-section">
+          <div>
+            <p>Admin ID</p>
+            <strong>ADMIN-2025-HD001</strong>
+          </div>
+          <div>
+            <p>Jurisdiction</p>
+            <strong>Hyderabad District</strong>
+          </div>
+          <div>
+            <p>Member Since</p>
+            <strong>15 Nov 2024</strong>
+          </div>
+           <div>
+            <p>Days Active</p>
+            <strong>62</strong>
+          </div>
+        </div>
+        <div class="stats-section">
+          <div>
+            <strong>347</strong>
+            <p>Members Added</p>
+          </div>
+          <div>
+            <strong>128</strong>
+            <p>Approvals Processed</p>
+          </div>
+          <div>
+            <strong>5</strong>
+            <p>Campaigns Created</p>
+          </div>
+           <div>
+            <p>Days Active</p>
+            <strong>45</strong>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="profile-details-container">
+    <div class="main-content">
+      <mat-tab-group>
+        <mat-tab label="Personal Information">
+          <div class="tab-content">
+            <form>
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>Basic Information</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <div class="form-row">
+                    <mat-form-field appearance="outline">
+                      <mat-label>First Name *</mat-label>
+                      <input matInput value="Rajesh">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Middle Name</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+                  </div>
+                   <div class="form-row">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Last Name *</mat-label>
+                      <input matInput value="Kumar">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Date of Birth</mat-label>
+                      <input matInput value="15/03/1985">
+                    </mat-form-field>
+                  </div>
+                  <div class="form-row">
+                     <mat-form-field appearance="outline">
+                        <mat-label>Gender</mat-label>
+                        <mat-select value="male">
+                          <mat-option value="male">Male</mat-option>
+                          <mat-option value="female">Female</mat-option>
+                          <mat-option value="other">Other</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>Contact Information</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Mobile Number *</mat-label>
+                            <input matInput value="+91 98765 43210">
+                        </mat-form-field>
+                         <mat-form-field appearance="outline">
+                            <mat-label>Alternate Mobile</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                     <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email Address *</mat-label>
+                            <input matInput value="rajesh.kumar@gov.ts.in">
+                        </mat-form-field>
+                         <mat-form-field appearance="outline">
+                            <mat-label>WhatsApp Number</mat-label>
+                            <input matInput>
+                             <mat-checkbox>Same as mobile</mat-checkbox>
+                        </mat-form-field>
+                    </div>
+                </mat-card-content>
+              </mat-card>
+
+               <mat-card class="official-details-card">
+                 <mat-card-header>
+                    <mat-card-title>Official Details</mat-card-title>
+                 </mat-card-header>
+                 <mat-card-content>
+                    <p>These details are managed by system administrators and cannot be edited directly.</p>
+                     <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Admin ID</mat-label>
+                            <input matInput value="ADMIN-2025-HD001" disabled>
+                        </mat-form-field>
+                         <mat-form-field appearance="outline">
+                            <mat-label>Role</mat-label>
+                            <input matInput value="District Admin" disabled>
+                        </mat-form-field>
+                    </div>
+                     <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Assigned Jurisdiction</mat-label>
+                            <input matInput value="Hyderabad District" disabled>
+                        </mat-form-field>
+                         <mat-form-field appearance="outline">
+                            <mat-label>Reporting To</mat-label>
+                            <input matInput value="State Admin - Telangana" disabled>
+                        </mat-form-field>
+                    </div>
+                     <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Appointment Date</mat-label>
+                            <input matInput value="15 Nov 2024" disabled>
+                        </mat-form-field>
+                         <mat-form-field appearance="outline">
+                            <mat-label>Status</mat-label>
+                            <input matInput value="Active" disabled>
+                        </mat-form-field>
+                    </div>
+                 </mat-card-content>
+               </mat-card>
+
+                <mat-card>
+                 <mat-card-header>
+                    <mat-card-title>Mailing Address</mat-card-title>
+                 </mat-card-header>
+                 <mat-card-content>
+                     <div class="form-row">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Address Line 1</mat-label>
+                            <input matInput value="Flat No. 302, Surya Residency">
+                        </mat-form-field>
+                    </div>
+                     <div class="form-row">
+                         <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Address Line 2</mat-label>
+                            <input matInput value="Jubilee Hills Road No. 36">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Village/Town</mat-label>
+                            <input matInput value="Jubilee Hills">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Mandal</mat-label>
+                            <input matInput value="Secunderabad">
+                        </mat-form-field>
+                    </div>
+                     <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>District</mat-label>
+                            <input matInput value="Hyderabad">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>State</mat-label>
+                            <input matInput value="Telangana">
+                        </mat-form-field>
+                    </div>
+                     <div class="form-row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>PIN Code</mat-label>
+                            <input matInput value="500033">
+                        </mat-form-field>
+                    </div>
+                 </mat-card-content>
+               </mat-card>
+            </form>
+          </div>
+        </mat-tab>
+        <mat-tab label="Account Settings"></mat-tab>
+        <mat-tab label="Activity History"></mat-tab>
+        <mat-tab label="Notifications"></mat-tab>
+        <mat-tab label="Security"></mat-tab>
+      </mat-tab-group>
+       <div class="form-actions">
+          <button mat-flat-button color="primary">Save Changes</button>
+          <button mat-button>Cancel</button>
+          <button mat-stroked-button>Request Profile Update</button>
+          <span>Auto-saved 2 minutes ago</span>
+        </div>
+    </div>
+    <div class="side-content">
+      <mat-card class="help-support-card">
+        <mat-card-header>
+          <mat-card-title>Help & Support</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ul>
+            <li>
+              <mat-icon>help_outline</mat-icon>
+              <div>
+                <strong>Frequently Asked Questions</strong>
+                <p>Answers to common profile management queries</p>
+              </div>
+            </li>
+             <li>
+              <mat-icon>email</mat-icon>
+              <div>
+                <strong>Contact Support</strong>
+                <p>support@mews.ts.gov.in</p>
+              </div>
+            </li>
+            <li>
+              <mat-icon>description</mat-icon>
+              <div>
+                <strong>User Guide</strong>
+                <p>Download PDF guide</p>
+              </div>
+            </li>
+             <li>
+              <mat-icon>videocam</mat-icon>
+              <div>
+                <strong>Video Tutorials</strong>
+                <p>Step-by-step walkthroughs</p>
+              </div>
+            </li>
+             <li>
+              <mat-icon>report_problem</mat-icon>
+              <div>
+                <strong>Report a Problem</strong>
+                <p>Technical issues or feedback</p>
+              </div>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="profile-tips-card">
+        <mat-card-header>
+          <mat-card-title>Profile Tips</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ul>
+            <li>
+              <mat-icon>check_circle_outline</mat-icon>
+              <div>
+                <strong>Professional Photo</strong>
+                <p>Upload a clear, professional headshot for better recognition in the system.</p>
+              </div>
+            </li>
+             <li>
+              <mat-icon>check_circle_outline</mat-icon>
+              <div>
+                <strong>Keep Information Updated</strong>
+                <p>Regularly update your contact information to ensure you receive important notifications.</p>
+              </div>
+            </li>
+             <li>
+              <mat-icon>check_circle_outline</mat-icon>
+              <div>
+                <strong>Enable Two-Factor Authentication</strong>
+                <p>Secure your account with 2FA in the Security tab for enhanced protection.</p>
+              </div>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

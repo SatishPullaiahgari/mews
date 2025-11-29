@@ -1,0 +1,26 @@
+<div class="sidenav-container">
+  <div class="logo-container">
+    <img src="https://static.paraflowcontent.com/public/resource/image/7d0c7468-07a4-4518-982f-511189756109.jpeg" alt="MEWS Logo" class="logo">
+    <div>
+      <h2>MEWS</h2>
+      <p>Telangana State</p>
+    </div>
+    <button class="close-button" (click)="onCloseSidenav()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <ul class="nav-links">
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/dashboard"><mat-icon>dashboard</mat-icon> Dashboard</a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/add-member"><mat-icon>person_add</mat-icon> Add Member</a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/all-members"><mat-icon>groups</mat-icon> All Members</a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/bulk-upload"><mat-icon>upload</mat-icon> Bulk Upload</a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/pending-approvals"><mat-icon>pending_actions</mat-icon> Pending Approvals <span class="badge">47</span></a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/campaigns"><mat-icon>favorite</mat-icon> Campaigns</a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/donation-reports"><mat-icon>assessment</mat-icon> Donations Report</a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/leaderboard"><mat-icon>leaderboard</mat-icon> Leaderboard</a></li>
+    <li class="nav-link" routerLinkActive="active"><a routerLink="/admin/my-profile"><mat-icon>account_circle</mat-icon> My Profile</a></li>
+  </ul>
+  <div class="logout-link">
+    <a (click)="openLogoutDialog()"><mat-icon>logout</mat-icon> Logout</a>
+  </div>
+</div>

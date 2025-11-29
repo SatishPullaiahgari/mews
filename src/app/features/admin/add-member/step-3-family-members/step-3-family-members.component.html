@@ -1,0 +1,24 @@
+<h3>Family Members</h3>
+<p>Add up to 7 family members (Optional but recommended)</p>
+
+<div class="family-members-container">
+  <div class="no-family-members" *ngIf="!familyMembers.length">
+    <p>No family members added yet</p>
+    <button (click)="addFamilyMember()">+ Add First Family Member</button>
+  </div>
+
+  <div class="family-member-list" *ngIf="familyMembers.length">
+    <div class="family-member-card" *ngFor="let member of familyMembers; let i = index">
+      <h4>Family Member {{ i + 1 }}</h4>
+      <!-- Add form fields for family member details here -->
+      <button (click)="removeFamilyMember(i)">Remove</button>
+    </div>
+    <button (click)="addFamilyMember()">+ Add Another Family Member</button>
+  </div>
+</div>
+
+<div class="form-actions">
+  <button class="back-btn" (click)="previousStep()">Back: Documents</button>
+  <button class="save-draft-btn" (click)="saveAsDraft()">Save as Draft</button>
+  <button class="next-btn" (click)="nextStep()">Next: Review & Submit</button>
+</div>

@@ -1,0 +1,43 @@
+<div class="breadcrumb">
+  <span>Dashboard > Members > Add New Member</span>
+  <div class="header-actions">
+    <button mat-stroked-button>Save as Draft</button>
+    <button mat-stroked-button color="warn">Exit</button>
+  </div>
+</div>
+
+<mat-stepper #stepper>
+  <mat-step>
+    <ng-template matStepLabel>Personal Details</ng-template>
+    <app-step-1-personal-details></app-step-1-personal-details>
+    <div class="step-actions">
+      <button mat-stroked-button>Cancel</button>
+      <button mat-stroked-button>Save and Draft</button>
+      <button mat-flat-button color="primary" matStepperNext>Next: Documents</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Documents</ng-template>
+    <app-step-2-documents></app-step-2-documents>
+    <div class="step-actions">
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Family Members</ng-template>
+    <app-step-3-family-members></app-step-3-family-members>
+    <div class="step-actions">
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Review & Submit</ng-template>
+    <app-step-4-review-and-submit></app-step-4-review-and-submit>
+    <div class="step-actions">
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-flat-button color="primary">Submit</button>
+    </div>
+  </mat-step>
+</mat-stepper>

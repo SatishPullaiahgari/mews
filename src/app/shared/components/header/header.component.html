@@ -1,0 +1,31 @@
+<header class="header-container">
+  <div class="header-left">
+    <button class="menu-button" (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="header-title">
+      <h1>District Admin Portal</h1>
+      <p>Hyderabad District</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="search-bar">
+      <input type="text" placeholder="Search members and campaigns...">
+    </div>
+    <div class="user-info">
+      <button mat-icon-button [matMenuTriggerFor]="userMenu">
+        <img src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="User Avatar" class="avatar">
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item routerLink="/admin/dashboard/my-profile">
+          <mat-icon>account_circle</mat-icon>
+          <span>My Profile</span>
+        </button>
+        <button mat-menu-item (click)="openLogoutDialog()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</header>

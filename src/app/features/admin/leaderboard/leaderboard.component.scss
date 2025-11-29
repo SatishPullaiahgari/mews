@@ -1,0 +1,139 @@
+.leaderboard-container {
+    padding: 2rem;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .monthly-rankings {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    .filters,
+    .categories,
+    .leaderboard-levels {
+        margin-top: 1rem;
+    }
+
+    .top-performers {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .performer-card {
+            flex: 1;
+            text-align: center;
+
+            &.highlight {
+                border: 2px solid gold;
+            }
+
+            .performer-icon-container {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+
+                &.grey {
+                    background-color: #f0f0f0;
+                }
+
+                &.yellow {
+                    background-color: gold;
+                }
+
+                &.brown {
+                    background-color: #cd7f32;
+                }
+            }
+
+            .admin-avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .your-performance {
+        margin-top: 1rem;
+
+        mat-card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .performance-details {
+                display: flex;
+                gap: 2rem;
+
+                .positive {
+                    color: green;
+                }
+            }
+        }
+    }
+
+    .complete-rankings {
+        margin-top: 1rem;
+
+        mat-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .actions {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+
+            th, td {
+                padding: 0.75rem;
+                text-align: left;
+                border-bottom: 1px solid #eee;
+            }
+
+            .user-row {
+                background-color: #e3f2fd;
+            }
+
+            .trend-up {
+                color: green;
+            }
+
+            .trend-down {
+                color: red;
+            }
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+
+            .paginator-controls {
+                display: flex;
+                gap: 0.5rem;
+
+                .active {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

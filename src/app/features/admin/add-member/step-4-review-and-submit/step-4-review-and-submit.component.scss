@@ -1,0 +1,43 @@
+/* Basic styles for the review-and-submit component */
+
+.review-container {
+  margin-top: 20px;
+}
+
+.review-section {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-section h4 {
+  margin: 0;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-draft-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-draft-btn {
+  background-color: #f0f2f5;
+  margin-right: 10px;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+}

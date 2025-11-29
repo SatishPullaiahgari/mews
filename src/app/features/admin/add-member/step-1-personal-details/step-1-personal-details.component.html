@@ -1,0 +1,211 @@
+<div class="step-content-wrapper">
+  <div class="form-column">
+    <h2>Add New Member - Personal Details</h2>
+    <p>Please provide accurate personal information. All fields marked with * are required.<br>Estimated completion time: 5-8 minutes <span class="required-text">* = Required field</span></p>
+
+    <form [formGroup]="personalDetailsForm">
+      <div class="section">
+        <h3>Personal Information</h3>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Surname *</mat-label>
+            <input matInput value="">
+            <mat-hint align="start">0/50 characters</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>First Name *</mat-label>
+            <input matInput value="">
+            <mat-hint align="start">0/50 characters</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="form-row father-husband-row">
+          <mat-form-field appearance="outline" class="relation-type-dd">
+            <mat-select value="father">
+              <mat-option value="father">Father's</mat-option>
+              <mat-option value="husband">Husband's</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="relation-name-input">
+            <mat-label>Father's/Husband's Name *</mat-label>
+            <input matInput value="">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Birth and Family Details</h3>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Date of Birth *</mat-label>
+            <input matInput value="24/11/2025">
+            <mat-icon matSuffix>today</mat-icon>
+            <mat-hint>Format: DD/MM/YYYY - Age will be calculated automatically</mat-hint>
+          </mat-form-field>
+          <div class="radio-group">
+            <label>Gender *</label>
+            <mat-radio-group>
+              <mat-radio-button value="male">Male</mat-radio-button>
+              <mat-radio-button value="female">Female</mat-radio-button>
+              <mat-radio-button value="other">Other</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Spouse Caste</mat-label>
+            <mat-select>
+              <mat-option value="">Select spouse caste</mat-option>
+            </mat-select>
+             <mat-hint>Check if applicable - proof documentation will be required</mat-hint>
+          </mat-form-field>
+          <mat-checkbox>Inter-caste marriage</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Contact Information</h3>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile Number *</mat-label>
+            <span matPrefix>+91 &nbsp;</span>
+            <input matInput>
+            <mat-hint>Will be verified via OTP <a href="#">Send OTP</a></mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Alternate Mobile Number</mat-label>
+             <span matPrefix>+91 &nbsp;</span>
+            <input matInput>
+            <mat-hint>Optional - for emergency contact</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput type="email">
+            <mat-hint>Optional - for notifications and updates</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+
+       <div class="section">
+        <h3>Government ID Numbers</h3>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Aadhaar Number *</mat-label>
+            <input matInput value="XXXX-XXXX-1234">
+            <mat-icon matSuffix>info_outline</mat-icon>
+             <mat-hint>12-digit Aadhaar number - Will check for duplicates</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Voter ID *</mat-label>
+            <input matInput value="ABC1234567">
+             <mat-icon matSuffix>info_outline</mat-icon>
+             <mat-hint>Format: ABC1234567 (3 letters + 7 digits)</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="form-row ration-card-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Ration Card Number</mat-label>
+            <input matInput>
+             <mat-hint>Required for BPL category programs</mat-hint>
+          </mat-form-field>
+          <button mat-stroked-button class="bpl-button">BPL Category</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Address Information</h3>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Village *</mat-label>
+            <input matInput formControlName="village" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let suggestion of addressSuggestions" [value]="suggestion.description" (onSelectionChange)="onAddressSelected(suggestion)">
+                {{ suggestion.description }}
+              </mat-option>
+            </mat-autocomplete>
+            <mat-icon matSuffix>search</mat-icon>
+            <mat-hint>Based on your jurisdiction</mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Mandal</mat-label>
+            <input matInput formControlName="mandal">
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-hint>Based on village selection</mat-hint>
+          </mat-form-field>
+           <mat-form-field appearance="outline">
+            <mat-label>District</mat-label>
+            <input matInput formControlName="district">
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-hint>Official district name</mat-hint>
+          </mat-form-field>
+        </div>
+         <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>PIN Code</mat-label>
+              <input matInput formControlName="pincode">
+            </mat-form-field>
+          </div>
+      </div>
+    </form>
+
+    <div class="data-entry-tips">
+        <h4>Data Entry Tips</h4>
+        <ul>
+            <li>Ensure Aadhaar number is valid</li>
+            <li>Mobile number must be unique</li>
+        </ul>
+    </div>
+
+  </div>
+  <div class="validation-column">
+    <div class="validation-card">
+      <h3>Field Validation</h3>
+      <p>Required Fields Completed: <span>2 of 12</span></p>
+      <div class="validation-section">
+        <h4>Name Details</h4>
+        <ul>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> Surname</li>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> First Name</li>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> Father's/Husband's Name</li>
+        </ul>
+      </div>
+       <div class="validation-section">
+        <h4>Birth Details</h4>
+        <ul>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> Date of Birth</li>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> Gender</li>
+        </ul>
+      </div>
+      <div class="validation-section">
+        <h4>Contact Information</h4>
+        <ul>
+          <li><mat-icon class="success">check_circle</mat-icon> Mobile Number</li>
+          <li><mat-icon class="success">check_circle</mat-icon> Email (Optional)</li>
+        </ul>
+      </div>
+       <div class="validation-section">
+        <h4>Government IDs</h4>
+        <ul>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> Aadhaar Number</li>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> Voter ID</li>
+        </ul>
+      </div>
+       <div class="validation-section">
+        <h4>Address</h4>
+        <ul>
+          <li><mat-icon class="pending">radio_button_unchecked</mat-icon> Village</li>
+        </ul>
+      </div>
+      <div class="common-errors">
+        <h4>Common Validation Errors</h4>
+        <ul>
+          <li>- Mobile numbers must be unique</li>
+          <li>- Aadhaar format: XXXX-XXXX-1234</li>
+          <li>- Minimum age requirement: 18 years</li>
+          <li>- All asterisk (*) fields are mandatory</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

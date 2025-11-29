@@ -1,0 +1,146 @@
+<div class="all-members-header">
+  <div>
+    <h2>All Members</h2>
+    <p>2,847 registered members in Hyderabad District - Last updated: Today, 2:30 PM IST</p>
+  </div>
+  <div class="header-actions">
+    <button class="add-new-btn" [routerLink]="['/admin/dashboard/add-member']">+ Add New Member</button>
+    <button class="bulk-upload-btn">Bulk Upload</button>
+    <div class="sort-by">
+      <label>Sort By:</label>
+      <select>
+        <option>Member ID</option>
+      </select>
+    </div>
+    <button class="export-btn">Export All</button>
+  </div>
+</div>
+
+<div class="filter-and-list-container">
+  <div class="search-and-filter">
+    <input type="text" placeholder="Search by name, mobile, Aadhaar, Voter ID, Member ID...">
+    <div class="filter-options">
+      <a>Show Filters</a>
+      <a>Clear All Filters</a>
+    </div>
+    <div class="filter-dropdowns">
+        <div class="filter-group">
+          <label>Village</label>
+          <select><option>All Villages</option></select>
+        </div>
+        <div class="filter-group">
+          <label>Mandal</label>
+          <select><option>All Mandals</option></select>
+        </div>
+        <div class="filter-group">
+          <label>District</label>
+          <select><option>Hyderabad District</option></select>
+        </div>
+        <div class="filter-group">
+          <label>Gender</label>
+          <div class="gender-options">
+            <button>All</button>
+            <button>Male</button>
+            <button>Female</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Age Range</label>
+          <input type="number" value="18"> - <input type="number" value="100">
+        </div>
+        <div class="filter-group">
+          <label>Profession</label>
+          <select><option>All Professions</option></select>
+        </div>
+        <div class="filter-group">
+          <label>Caste Category</label>
+          <select><option>All Categories</option></select>
+        </div>
+        <button class="apply-filters-btn">Apply Filters</button>
+    </div>
+  </div>
+
+  <div class="member-stats">
+    <span>Showing 2,847 members</span>
+    <div>
+      <span><strong>2,847</strong> Total Members</span>
+      <span><strong>142 (+12%)</strong> Added This Month</span>
+      <span><strong>2,103</strong> With Families</span>
+      <span><strong>45</strong> Verified Today</span>
+    </div>
+  </div>
+
+  <div class="members-table">
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox"></th>
+          <th>Member ID</th>
+          <th>Photo</th>
+          <th>Full Name</th>
+          <th>Gender & Age</th>
+          <th>Profession</th>
+          <th>Mobile Number</th>
+          <th>Village</th>
+          <th>Registration Date</th>
+          <th>Family Members</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>TS-MEWS-2025-000001</td>
+          <td><img src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="avatar" class="avatar"></td>
+          <td><a [routerLink]="['/admin/dashboard/id-card-view', 'TS-MEWS-2025-000001']">Kumar Rajesh</a></td>
+          <td>M, 42</td>
+          <td>Farmer</td>
+          <td>+91 XXXXX-XXXXX</td>
+          <td>Begumpet</td>
+          <td>15/01/2025</td>
+          <td>4 members</td>
+          <td><span class="status active">Active</span></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>TS-MEWS-2025-000002</td>
+          <td><img src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="avatar" class="avatar"></td>
+          <td><a [routerLink]="['/admin/dashboard/id-card-view', 'TS-MEWS-2025-000002']">Sharma Priya</a></td>
+          <td>F, 38</td>
+          <td>Teacher</td>
+          <td>+91 XXXXX-XXXXX</td>
+          <td>Kukatpally</td>
+          <td>14/01/2025</td>
+          <td>2 members</td>
+          <td><span class="status pending">Pending</span></td>
+        </tr>
+         <tr>
+          <td><input type="checkbox"></td>
+          <td>TS-MEWS-2025-000003</td>
+          <td><img src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="avatar" class="avatar"></td>
+          <td><a [routerLink]="['/admin/dashboard/id-card-view', 'TS-MEWS-2025-000003']">Reddy Anil</a></td>
+          <td>M, 29</td>
+          <td>Business Owner</td>
+          <td>+91 XXXXX-XXXXX</td>
+          <td>Madhapur</td>
+          <td>13/01/2025</td>
+          <td>None</td>
+          <td><span class="status active">Active</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <span>Showing 1-20 of 2,847 members</span>
+    <div>
+      <button>&lt; Previous</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <span>...</span>
+      <button>143</button>
+      <button>Next &gt;</button>
+    </div>
+  </div>
+</div>

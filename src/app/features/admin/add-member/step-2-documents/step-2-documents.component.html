@@ -1,0 +1,60 @@
+<h3>Upload Documents</h3>
+<p>Upload clean, readable copies of all required documents.</p>
+
+<div class="document-upload-container">
+    <div class="document-upload-card">
+        <div class="document-info">
+            <h4>Aadhaar Card <span class="required">Required</span></h4>
+            <p>JPG, PNG, PDF - Max 5MB</p>
+        </div>
+        <div class="upload-area">
+            <p>Drag & drop or <a href="#">click to browse</a></p>
+        </div>
+    </div>
+
+    <div class="document-upload-card">
+        <div class="document-info">
+            <h4>Voter ID Card <span class="required">Required</span></h4>
+            <p>JPG, PNG, PDF - Max 5MB</p>
+        </div>
+        <div class="upload-area">
+            <p>Drag & drop or <a href="#">click to browse</a></p>
+        </div>
+    </div>
+
+    <div class="document-upload-card">
+        <div class="document-info">
+            <h4>Ration Card (BPL) <span class="conditional">Conditional</span></h4>
+            <p>Required for BPL category members</p>
+        </div>
+        <div class="upload-area">
+            <p>Drag & drop or <a href="#">click to browse</a></p>
+        </div>
+    </div>
+
+    <div class="document-upload-card">
+        <div class="document-info">
+            <h4>Inter-caste Marriage Certificate <span class="conditional">Conditional</span></h4>
+            <p>Required for inter-caste verification</p>
+        </div>
+        <div class="upload-area">
+            <p>Drag & drop or <a href="#">click to browse</a></p>
+        </div>
+    </div>
+
+    <div class="document-upload-card">
+        <div class="document-info">
+            <h4>Recent Passport-size Photo <span class="required">Required</span></h4>
+            <p>Plain clear visibility, plain background preferred, within 6 months</p>
+        </div>
+        <div class="upload-area">
+            <p>Drag & drop or <a href="#">click to browse</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="form-actions">
+  <button class="back-btn" (click)="previousStep()">Back: Personal Details</button>
+  <button class="save-draft-btn" (click)="saveAsDraft()">Save as Draft</button>
+  <button class="next-btn" (click)="nextStep()">Next: Family Members</button>
+</div>

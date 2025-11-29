@@ -1,0 +1,31 @@
+<h3>Review & Submit</h3>
+<p>Please review all the information carefully before submitting.</p>
+
+<div class="review-container">
+  <!-- Personal Details Review -->
+  <div class="review-section">
+    <h4>Personal Details</h4>
+    <!-- Display personal details here -->
+    <button>Edit</button>
+  </div>
+
+  <!-- Documents Review -->
+  <div class="review-section">
+    <h4>Documents</h4>
+    <!-- Display uploaded documents here -->
+    <button>Edit</button>
+  </div>
+
+  <!-- Family Members Review -->
+  <div class="review-section">
+    <h4>Family Members</h4>
+    <!-- Display family members here -->
+    <button>Edit</button>
+  </div>
+</div>
+
+<div class="form-actions">
+  <button class="back-btn" (click)="previousStep()">Back: Family Members</button>
+  <button class="save-draft-btn" (click)="saveAsDraft()">Save as Draft</button>
+  <button class="submit-btn" (click)="submit()">Submit</button>
+</div>

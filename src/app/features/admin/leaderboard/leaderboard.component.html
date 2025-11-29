@@ -1,0 +1,195 @@
+<div class="leaderboard-container">
+  <div class="header">
+    <div>
+      <h1>Leaderboard</h1>
+      <p>Recognizing excellence in community service</p>
+    </div>
+    <div class="monthly-rankings">
+      <span>Monthly Rankings</span>
+      <strong>November 2025</strong>
+    </div>
+  </div>
+
+  <div class="filters">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="this-week">This Week</mat-button-toggle>
+      <mat-button-toggle value="this-month">This Month</mat-button-toggle>
+      <mat-button-toggle value="last-month">Last Month</mat-button-toggle>
+      <mat-button-toggle value="this-quarter">This Quarter</mat-button-toggle>
+      <mat-button-toggle value="this-year">This Year</mat-button-toggle>
+      <mat-button-toggle value="all-time">All Time</mat-button-toggle>
+      <mat-button-toggle value="custom-range">Custom Range</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="categories">
+    <mat-chip-listbox aria-label="Category selection">
+      <mat-chip-option selected>Member Registrations</mat-chip-option>
+      <mat-chip-option>Approval Efficiency</mat-chip-option>
+      <mat-chip-option>Campaign Success</mat-chip-option>
+      <mat-chip-option>Overall Performance</mat-chip-option>
+    </mat-chip-listbox>
+  </div>
+
+   <div class="leaderboard-levels">
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+      <mat-button-toggle value="villages" checked>Villages Leaderboard</mat-button-toggle>
+      <mat-button-toggle value="mandals">Mandals Leaderboard</mat-button-toggle>
+      <mat-button-toggle value="districts">Districts Leaderboard</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="top-performers">
+    <mat-card class="performer-card">
+      <mat-card-content>
+        <div class="performer-icon-container grey">
+            <mat-icon>person_outline</mat-icon>
+        </div>
+        <h4>Kondapur Village</h4>
+        <div class="members">289 members</div>
+        <p class="admin">Admin: Priya Sharma</p>
+        <div class="growth">+118%</div>
+        <img class="admin-avatar" src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="Priya Sharma">
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="performer-card highlight">
+       <mat-card-content>
+        <div class="performer-icon-container yellow">
+            <mat-icon>emoji_events</mat-icon>
+        </div>
+        <h4>Gachibowli Village</h4>
+        <div class="members">347 members</div>
+        <p class="admin">Admin: Rajesh Kumar</p>
+        <div class="growth">+145%</div>
+        <img class="admin-avatar" src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="Rajesh Kumar">
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="performer-card">
+      <mat-card-content>
+        <div class="performer-icon-container brown">
+            <mat-icon>person_outline</mat-icon>
+        </div>
+        <h4>Madhapur Village</h4>
+        <div class="members">267 members</div>
+        <p class="admin">Admin: Anita Reddy</p>
+        <div class="growth">+89%</div>
+        <img class="admin-avatar" src="https://static.paraflowcontent.com/public/resource/image/e8793bd3-8723-4526-a640-8e9781cf12d3.jpeg" alt="Anita Reddy">
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="your-performance">
+    <mat-card>
+        <mat-card-content>
+            <div class="performance-details">
+                <div>
+                    <p>Your Performance</p>
+                    <span>Current Rank</span>
+                    <strong>#23 of 547 villages</strong>
+                </div>
+                <div>
+                    <span>Your Score</span>
+                    <strong>78/100</strong>
+                </div>
+                <div>
+                    <span>Members Added</span>
+                    <strong>45 this month</strong>
+                </div>
+                <div>
+                    <span>Rank Change</span>
+                    <strong class="positive">↑ 5 positions</strong>
+                </div>
+            </div>
+            <div class="next-milestone">
+                <p>Next Milestone</p>
+                <strong>Add 12 more to reach top 20</strong>
+                <button mat-flat-button color="primary">View Detailed Analytics</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="complete-rankings">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Complete Rankings</mat-card-title>
+            <div class="actions">
+                 <input placeholder="Search rankings...">
+                <button mat-stroked-button><mat-icon>download</mat-icon> Export</button>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Location</th>
+                        <th>Members Added</th>
+                        <th>Growth</th>
+                        <th>Total Members</th>
+                        <th>Top Admin</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4 ↑</td>
+                        <td>Hitec City Village</td>
+                        <td>234</td>
+                        <td>+67%</td>
+                        <td>1,234</td>
+                        <td>Vikash Patel</td>
+                        <td><span class="trend-up">↑</span></td>
+                    </tr>
+                    <tr>
+                        <td>5 -</td>
+                        <td>Banjara Hills Village</td>
+                        <td>198</td>
+                        <td>+42%</td>
+                        <td>987</td>
+                        <td>Meera Singh</td>
+                        <td><span class="trend-up">↑</span></td>
+                    </tr>
+                     <tr>
+                        <td>6 ↓</td>
+                        <td>Jubilee Hills Village</td>
+                        <td>187</td>
+                        <td>+28%</td>
+                        <td>823</td>
+                        <td>Arjun Reddy</td>
+                        <td><span class="trend-down">↓</span></td>
+                    </tr>
+                     <tr>
+                        <td>7 ↑</td>
+                        <td>Ameerpet Village</td>
+                        <td>156</td>
+                        <td>+34%</td>
+                        <td>743</td>
+                        <td>Sunita Devi</td>
+                        <td><span class="trend-up">↑</span></td>
+                    </tr>
+                     <tr class="user-row">
+                        <td>23 ↑ YOU</td>
+                        <td>Your Village</td>
+                        <td>45</td>
+                        <td>+78%</td>
+                        <td>312</td>
+                        <td>You</td>
+                        <td><span class="trend-up">↑</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <span>Showing 1-25 of 547 villages</span>
+                <div class="paginator-controls">
+                    <button mat-button>Previous</button>
+                    <button mat-button class="active">1</button>
+                    <button mat-button>2</button>
+                    <button mat-button>3</button>
+                    <button mat-button>Next</button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+  </div>
+</div>
